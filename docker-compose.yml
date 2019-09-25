@@ -101,5 +101,24 @@ services:
       - RABBITMQ_DEFAULT_PASS=guest
     networks:
       - default
+
+  influxdb:
+    image: influxdb:latest
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+    restart: always
+    container_name: "influxdb"
+    volumes:
+
+      - ./influxdb:/var/lib/influxdb:rw
+    environment:
+      - INFLUXDB_ADMIN_ENABLED=true
+      - ADMIN_USER="root"
+      - INFLUXDB_INIT_PWD="123456"
+      - PRE_CREATE_DB="mcentr"
+    networks:
+      - default
+
 networks:
   default:

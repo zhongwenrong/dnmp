@@ -1,6 +1,6 @@
 <?php
-phpinfo();
-echo '<h1 style="text-align: center;">欢迎使用DNMP！</h1>';
+// phpinfo();
+// echo '<h1 style="text-align: center;">欢迎使用DNMP！</h1>';
 echo '<h2>版本信息</h2>';
 
 echo '<ul>';
@@ -11,7 +11,7 @@ echo '<li>Redis服务器版本：', getRedisVersion(), '</li>';
 echo '</ul>';
 
 echo '<h2>已安装扩展</h2>';
-printExtensions();
+// printExtensions();
 /**
  * 获取MySQL版本
  */
